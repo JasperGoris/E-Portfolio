@@ -1,0 +1,393 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    width: 100%;
+    background: #272B36;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around ;
+    z-index: 2;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li{
+    text-align: center;
+    float: left;
+    width: available;
+}
+
+li:nth-child(3){
+    margin-right: 60px;
+}
+
+a{
+    padding: 20px;
+    width: 100px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#section1 {
+    display: flex;
+    height: 100vh;
+    background: #272B36;
+    width: 100%;
+    flex-direction: column;
+}
+
+#section2 {
+    background: #556D87;
+    display: flex;
+    padding: 150px 100px;
+    flex-direction: column;
+}
+
+#section3 {
+    height: 700px;
+    background: #2C4664 ;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#section4 {
+    height: 1000px;
+    background: #1B2A3C;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#section5 {
+    height: 1000px;
+    background: #556D87;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#section6 {
+    height: 1000px;
+    background: blue;
+    display: inline-block;
+    width: 100%;
+}
+
+h1 {
+    margin:100px;
+    text-align: left;
+    padding: 0;
+    color: #A7CCED;
+    align-self: center;
+    font-size: 300%;
+}
+
+#head{
+    border-radius: 50%;
+    width: 550px;
+    margin-left: 100px ;
+    align-self: center;
+}
+
+#box {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#quote{
+    color: #A7CCED;
+    font-size: 450%;
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+.scrolldown {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #A7CCED;
+    border-right: 2px solid #A7CCED;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+}
+
+.scrolldown span:nth-child(1){
+    transform: translate(-15px, -15px);
+    animation-delay: -0.4s;
+}
+
+.scrolldown span:nth-child(2){
+    transform: translate(0,0);
+    animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(3){
+    transform: translate(15px, 15px);
+    animation-delay: 0s;
+}
+@keyframes animate {
+    0%{
+        top: -5px;
+        left: -5px;
+        opacity: 0;
+    }
+    25%{
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    100%{
+        top: 5px;
+        left: 5px;
+        opacity: 0;
+    }
+    
+}
+
+#text-block{
+    width: 60%;
+    align-self: center;
+    color: #A7CCED;
+}
+
+#hallo {
+    font-size: 450%;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#texthallo {
+    font-size: 200%;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.container{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin-bottom: 100px;
+    align-self: center;
+
+}
+
+.container .box{
+    position: relative ;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #000;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container .box .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #228B22;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.container .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container .box .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: #fff;
+}
+
+.container .box:hover .icon .fa {
+    font-size: 40px;
+}
+
+.container .box .content{
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.container .box:hover .content{
+    top: 100px;
+    opacity: 1;
+}
+
+
+.container .box .content h3 a {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #98BAD8;
+    font-size: 20px;
+}
+
+.container .box .content p {
+    margin: 0;
+    padding: 0;
+    color: #98BAD8;
+}
+
+.container .box:nth-child(1) .icon{
+    background: #82A0BC;
+}
+
+.container .box:nth-child(1) {
+    background: #1B2A3C;
+}
+
+.container .box:nth-child(2) .icon{
+    background: #545E75;
+}
+
+.container .box:nth-child(2) {
+    background: #1B2A3C;
+}
+
+.container .box:nth-child(3) .icon{
+    background: #82A0BC;
+}
+
+.container .box:nth-child(3) {
+    background: #1B2A3C;
+}
+
+.container .box:nth-child(4) .icon{
+    background: #545E75	;
+}
+
+.container .box:nth-child(4) {
+    background: #1B2A3C;
+}
+
+.container .box:nth-child(5) .icon{
+    background: #82A0BC ;
+}
+
+.container .box:nth-child(5) {
+    background: #1B2A3C;
+}
+
+.container .box:nth-child(6) .icon{
+    background: #545E75 ;
+}
+
+.container .box:nth-child(6) {
+    background: #1B2A3C;
+}
+
+.download {
+    --c: #1B2A3C;
+    color: var(--c);
+    font-size: 30px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+    background: #556D87;
+}
+
+.download span{
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.download:hover{
+    color: #98BAD8 ;
+}
+
+.download:hover span {
+    transform: translate(0) scale(2);
+}
+
+.download span:nth-child(1) {
+    --n: 1;
+}
+
+.download span:nth-child(2) {
+    --n: 2;
+}
+
+.download span:nth-child(3) {
+    --n: 3;
+}
+
+.download span:nth-child(4) {
+    --n: 4;
+}
+
+#cv {
+    align-self: center;
+}
+
+
